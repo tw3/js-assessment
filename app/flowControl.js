@@ -11,5 +11,20 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
 
+    if (num == null || isNaN(num)) {
+      return false;
+    }
+    const isDiv3 = (num % 3 === 0);
+    const isDiv5 = (num % 5 === 0);
+    if (isDiv3 && isDiv5) {
+      return 'fizzbuzz'
+    }
+    if (isDiv3) {
+      return 'fizz';
+    }
+    if (isDiv5) {
+      return 'buzz';
+    }
+    return num;
   }
 };
